@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('input[type="radio"]').each(function(){
+				var state = JSON.parse(localStorage.getItem('radio_' + this.id));
+				if(state) this.checked = state.checked;
+			});
+		});
+
+		$(window).bind('unload', function()
+		{
+			$('input[type=radio]').each(function()
+			{
+				localStorage.setItem('radio_' + this.id, JSON.stringify({checked: this.checked}));
+			});
+		});
+
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		body, html {
+		  height: 100%;
+		  margin: 0;
+		  font-family: 'Trebuchet MS', sans-serif;
+		}
+		table.customTable {
+		  width: 100%;
+		  background-color: #fcf2e8;
+		  border-collapse: collapse;
+		}
+
+		table.customTable td {
+
+		  padding: 10px;
+		}
+        table.customTable th{
+              padding: 10px;
+              position: sticky;
+              top: 0;
+        }
+
+		tr.header th
+            {
+              background-color: #bf646c;
+              color: #ead2c1;
+            }
+
+      	table td:nth-child(3), table td:nth-child(6), table td:nth-child(8), table td:nth-child(11), table td:nth-child(13), table td:nth-child(16), table td:nth-child(18), table td:nth-child(21), table td:nth-child(23), table td:nth-child(26)
+            {
+              background-color: #f8b6d4;
+            }
+        td.specialRoute{
+              background-color: #f8b6d4;
+        }
+        td.resetColor
+        {
+              background-color: #fcf2e8 !important;
+        }
+
+	</style>
+</head>
+<body>
+	<table class="customTable">
+  <thead>
+    <tr class = "header">
+      <th></th>	
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      <th>13</th>
+      <th>14</th>
+      <th>15</th>
+      <th>16</th>
+      <th>17</th>
+      <th>18</th>
+      <th>19</th>
+      <th>20</th>
+      <th>21</th>
+      <th>22</th>
+      <th>23</th>
+      <th>24</th>
+      <th>25</th>
+      <th>26</th>
+      <th>27</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Yorimoto</td>
+
+      <td> <input type="radio" id='yorimoto1' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto2' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto3' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto4' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto5' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto6' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto7' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto8' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto9' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto10' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto11' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto12' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto13' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto14' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto15' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto16' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto17' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto18' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto19' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto20' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto21' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto22' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto23' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto24' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto25' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto26' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yorimoto27' name="yorimoto" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Benkei</td>
+
+      <td> <input type="radio" id='benkei1' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei2' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei3' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei4' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei5' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei6' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei7' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei8' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei9' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei10' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei11' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei12' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei13' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei14' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei15' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei16' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei17' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei18' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei19' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei20' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei21' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei22' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei23' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei24' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei25' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei26' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='benkei27' name="benkei" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Tamamo</td>
+
+      <td> <input type="radio" id='tamamo1' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo2' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo3' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo4' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo5' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo6' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo7' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo8' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo9' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo10' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo11' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo12' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo13' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo14' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo15' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo16' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo17' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo18' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo19' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo20' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo21' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo22' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo23' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo24' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo25' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo26' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='tamamo27' name="tamamo" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Yoshitsune</td>
+
+      <td> <input type="radio" id='yoshitsune1' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune2' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune3' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune4' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune5' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune6' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune7' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune8' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune9' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune10' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune11' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune12' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune13' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune14' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune15' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune16' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune17' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune18' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune19' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune20' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune21' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune22' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune23' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune24' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune25' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune26' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoshitsune27' name="yoshitsune" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Shigehira</td>
+
+      <td> <input type="radio" id='shigehira1' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira2' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira3' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira4' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira5' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira6' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira7' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira8' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira9' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira10' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira11' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira12' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira13' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira14' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira15' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira16' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira17' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira18' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira19' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira20' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira21' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira22' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira23' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira24' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira25' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira26' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigehira27' name="shigehira" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Yoichi</td>
+
+      <td> <input type="radio" id='yoichi1' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi2' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi3' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi4' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi5' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi6' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi7' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi8' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi9' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi10' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi11' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi12' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi13' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi14' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi15' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi16' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi17' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi18' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi19' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi20' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi21' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi22' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi23' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi24' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi25' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi26' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yoichi27' name="yoichi" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Kurama</td>
+
+      <td> <input type="radio" id='kurama1' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama2' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama3' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama4' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama5' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama6' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama7' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama8' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama9' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama10' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama11' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama12' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama13' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama14' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama15' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama16' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama17' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama18' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama19' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama20' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama21' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama22' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama23' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama24' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama25' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama26' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kurama27' name="kurama" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Morinaga</td>
+
+      <td> <input type="radio" id='morinaga1' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga2' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga3' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga4' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga5' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga6' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga7' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga8' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga9' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga10' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga11' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga12' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga13' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga14' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga15' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga16' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga17' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga18' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga19' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga20' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga21' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga22' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga23' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga24' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga25' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga26' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='morinaga27' name="morinaga" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Kagetoki</td>
+
+      <td> <input type="radio" id='kagetoki1' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki2' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki3' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki4' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki5' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki6' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki7' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki8' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki9' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki10' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki11' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki12' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki13' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki14' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki15' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki16' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki17' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki18' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki19' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki20' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki21' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki22' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki23' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki24' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki25' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki26' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kagetoki27' name="kagetoki" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Yasuchika</td>
+
+      <td> <input type="radio" id='yasuchika1' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika2' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika3' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika4' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika5' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika6' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika7' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika8' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika9' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika10' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika11' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika12' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika13' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika14' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika15' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika16' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika17' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika18' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika19' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika20' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika21' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika22' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika23' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika24' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika25' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika26' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='yasuchika27' name="yasuchika" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Akihito</td>
+
+      <td> <input type="radio" id='akihito1' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito2' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito3' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito4' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito5' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito6' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito7' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito8' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito9' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito10' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito11' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito12' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito13' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito14' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito15' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito16' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito17' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito18' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito19' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito20' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito21' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito22' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito23' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito24' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito25' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito26' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='akihito27' name="akihito" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Yorimoto & Yoshitsune sequel</td>
+
+      <td> <input type="radio" id='minamoto1' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='minamoto2' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='minamoto3' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='minamoto4' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='minamoto5' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='minamoto6' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='minamoto7' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='minamoto8' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='minamoto9' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td class = "resetColor"> <input type="radio" id='minamoto10' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='minamoto11' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td class = "resetColor"> <input type="radio" id='minamoto12' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='minamoto13' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='minamoto14' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td class = "resetColor"> <input type="radio" id='minamoto15' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='minamoto16' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td class = "resetColor"> <input type="radio" id='minamoto17' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='minamoto18' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='minamoto19' name="minamoto" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Ibuki</td>
+
+      <td> <input type="radio" id='ibuki1' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki2' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki3' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki4' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki5' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki6' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki7' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki8' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki9' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki10' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki11' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki12' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki13' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki14' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki15' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki16' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki17' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki18' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki19' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki20' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki21' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki22' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki23' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki24' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki25' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki26' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ibuki27' name="ibuki" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Shigehira & Yoichi sequel</td>
+
+      <td> <input type="radio" id='shigeyoi1' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigeyoi2' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='shigeyoi3' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigeyoi4' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigeyoi5' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigeyoi6' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigeyoi7' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigeyoi8' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigeyoi9' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td class = "resetColor"> <input type="radio" id='shigeyoi10' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='shigeyoi11' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td class = "resetColor"> <input type="radio" id='shigeyoi12' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='shigeyoi13' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigeyoi14' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td class = "resetColor"> <input type="radio" id='shigeyoi15' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='shigeyoi16' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td class = "resetColor"> <input type="radio" id='shigeyoi17' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='shigeyoi18' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='shigeyoi19' name="shigeyoi" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Sueharu</td>
+
+      <td> <input type="radio" id='sueharu1' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu2' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu3' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu4' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu5' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu6' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu7' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu8' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu9' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu10' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu11' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu12' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu13' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu14' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu15' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu16' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu17' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu18' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu19' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu20' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu21' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu22' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu23' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu24' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu25' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu26' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='sueharu27' name="sueharu" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Kurama & Ibuki sequel</td>
+
+      <td> <input type="radio" id='kuraibu1' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kuraibu2' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='kuraibu3' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kuraibu4' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kuraibu5' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kuraibu6' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kuraibu7' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kuraibu8' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kuraibu9' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td class = "resetColor"> <input type="radio" id='kuraibu10' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='kuraibu11' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td class = "resetColor"> <input type="radio" id='kuraibu12' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='kuraibu13' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kuraibu14' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td class = "resetColor"> <input type="radio" id='kuraibu15' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='kuraibu16' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td class = "resetColor"> <input type="radio" id='kuraibu17' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td class= "specialRoute"> <input type="radio" id='kuraibu18' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='kuraibu19' name="kuraibu" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+  </tbody>
+</table>
+
+
+
+</body>
+</html>

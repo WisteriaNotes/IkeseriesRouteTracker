@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		$(document).ready(function(){
+			$('input[type="radio"]').each(function(){
+				var state = JSON.parse(localStorage.getItem('radio_' + this.id));
+				if(state) this.checked = state.checked;
+			});
+		});
+
+		$(window).bind('unload', function()
+		{
+			$('input[type=radio]').each(function()
+			{
+				localStorage.setItem('radio_' + this.id, JSON.stringify({checked: this.checked}));
+			});
+		});
+
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+		body, html {
+		  height: 100%;
+		  margin: 0;
+		  font-family: 'Trebuchet MS', sans-serif;
+		}
+		table.customTable {
+		  width: 100%;
+		  background-color: #e5e1e3;
+		  border-collapse: collapse;
+		}
+
+		table.customTable td {
+
+		  padding: 10px;
+		}
+        table.customTable th{
+              padding: 10px;
+              position: sticky;
+              top: 0;
+        }
+        tr.header th
+	    {
+	      background: linear-gradient(0deg, #171225 0%, #36113a 100%);
+	      color: #d7cee1;
+        }
+      	table td:nth-child(3), table td:nth-child(5), table td:nth-child(8), table td:nth-child(11), table td:nth-child(13), table td:nth-child(15), table td:nth-child(18), table td:nth-child(20), table td:nth-child(23), table td:nth-child(25)
+            {
+              background-color: #f8b6d4;
+            }
+        td.specialRoute{
+              background-color: #f8b6d4;
+        }
+        td.resetColor
+        {
+              background-color: #1c1e1e !important;
+        }
+    </style>
+</head>
+<body>
+	<table class="customTable">
+  <thead>
+    <tr class = "header">
+      <th></th>	
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      <th>13</th>
+      <th>14</th>
+      <th>15</th>
+      <th>16</th>
+      <th>17</th>
+      <th>18</th>
+      <th>19</th>
+      <th>20</th>
+      <th>21</th>
+      <th>22</th>
+      <th>23</th>
+      <th>24</th>
+      <th>25</th>
+
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+      <td>William</td>
+
+      <td> <input type="radio" id='william1' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william2' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william3' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william4' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william5' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william6' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william7' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william8' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william9' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william10' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william11' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william12' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william13' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william14' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william15' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william16' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william17' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william18' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william19' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william20' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william21' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william22' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william23' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william24' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william25' name="william" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Harrison</td>
+
+      <td> <input type="radio" id='harrison1' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison2' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison3' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison4' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison5' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison6' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison7' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison8' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison9' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison10' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison11' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison12' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison13' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison14' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison15' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison16' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison17' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison18' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison19' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison20' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison21' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison22' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison23' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison24' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='harrison25' name="harrison" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Liam</td>
+
+      <td> <input type="radio" id='liam1' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam2' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam3' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam4' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam5' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam6' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam7' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam8' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam9' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam10' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam11' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam12' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam13' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam14' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam15' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam16' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam17' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam18' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam19' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam20' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam21' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam22' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam23' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam24' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='liam25' name="liam" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Elbert</td>
+
+      <td> <input type="radio" id='elbert1' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert2' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert3' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert4' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert5' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert6' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert7' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert8' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert9' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert10' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert11' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert12' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert13' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert14' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert15' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert16' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert17' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert18' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert19' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert20' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert21' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert22' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert23' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert24' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='elbert25' name="elbert" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>Alfons</td>
+
+      <td> <input type="radio" id='alfons1' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons2' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons3' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons4' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons5' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons6' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons7' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons8' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons9' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons10' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons11' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons12' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons13' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons14' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons15' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons16' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons17' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons18' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons19' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons20' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons21' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons22' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons23' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons24' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='alfons25' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+  </tbody>
+</body>
+</html>
