@@ -5,6 +5,12 @@
 	<script>
 		$(document).ready(function(){
 			$('input[type="radio"]').each(function(){
+				$('input[type="radio"]').dblclick(function(){
+		      if($(this).is(':checked'))
+		      {
+		            $(this).prop('checked', false);
+		      }
+		    });
 				var state = JSON.parse(localStorage.getItem('radio_' + this.id));
 				if(state) this.checked = state.checked;
 			});

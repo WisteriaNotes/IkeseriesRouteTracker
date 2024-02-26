@@ -4,6 +4,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
+      $('input[type="radio"]').dblclick(function(){
+          if($(this).is(':checked'))
+          {
+                $(this).prop('checked', false);
+          }
+        });
 			$('input[type="radio"]').each(function(){
 				var state = JSON.parse(localStorage.getItem('radio_' + this.id));
 				if(state) this.checked = state.checked;
@@ -96,7 +102,7 @@
       <tr>
       <td>William</td>
 
-      <td> <input type="radio" id='william1' name="william" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='william1' name="william" style="display: block; margin: 0.5em auto;" > </td>
       <td> <input type="radio" id='william2' name="william" style="display: block; margin: 0.5em auto;"> </td>
       <td> <input type="radio" id='william3' name="william" style="display: block; margin: 0.5em auto;"> </td>
       <td> <input type="radio" id='william4' name="william" style="display: block; margin: 0.5em auto;"> </td>
@@ -241,6 +247,36 @@
       <td> <input type="radio" id='alfons23' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
       <td> <input type="radio" id='alfons24' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
       <td> <input type="radio" id='alfons25' name="alfons" style="display: block; margin: 0.5em auto;"> </td>
+
+    </tr>
+    <tr>
+      <td>ellis</td>
+
+      <td> <input type="radio" id='ellis1' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis2' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis3' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis4' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis5' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis6' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis7' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis8' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis9' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis10' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis11' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis12' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis13' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis14' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis15' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis16' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis17' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis18' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis19' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis20' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis21' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis22' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis23' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis24' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
+      <td> <input type="radio" id='ellis25' name="ellis" style="display: block; margin: 0.5em auto;"> </td>
 
     </tr>
   </tbody>
